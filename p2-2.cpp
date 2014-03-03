@@ -54,7 +54,7 @@ int main()
 			}
 		}
 		
-		// remove a node from middle of the list
+		// find the kth node from the end of the list
 		scanf("%d", &k);
 		ptr = sol.findKthNode(head, k);
 		printf("%d\n", ptr->val);
