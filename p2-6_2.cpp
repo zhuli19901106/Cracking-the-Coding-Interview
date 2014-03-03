@@ -16,22 +16,25 @@ public:
 			return head;
 		}
 		
-		// hash the pointers.
-		unordered_set<ListNode *> us;
-		ListNode *ptr;
+		ListNode *p1, *p2;
 		
-		ptr = head;
-		while (ptr != nullptr) {
-			if (us.find(ptr) != us.end()) {
-				// the first node of the cycle is found.
-				return ptr;
+		p1 = head;
+		while (p1 != nullptr) {
+			p2 = head;
+			while (p2 != p1->next && p2 != nullptr) {
+				if (p2 == p1) {
+					break;
+				} else {
+					p2 = p2->next;
+				}
+			}
+			if (p2 == p1->next) {
+				return p2;
 			} else {
-				us.insert(ptr);
-				ptr = ptr->next;
+				p1 = p1->next;
 			}
 		}
 		
-		// the list has no cycle.
 		return nullptr;
 	}
 };
