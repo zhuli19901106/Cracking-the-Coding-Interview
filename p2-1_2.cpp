@@ -12,7 +12,7 @@ struct ListNode {
 
 class Solution {
 public:
-	void removeDuplicates(struct ListNode *head) {
+	void removeDuplicates(ListNode *head) {
 		if (head == nullptr) {
 			return;
 		}

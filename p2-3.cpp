@@ -10,7 +10,7 @@ struct ListNode {
 
 class Solution {
 public:
-	void deleteThatNode(struct ListNode *ptr) {
+	void deleteThatNode(ListNode *ptr) {
 		if (ptr != nullptr && ptr->next != nullptr) {
 			struct ListNode *tmp = ptr->next;
 			ptr->val = tmp->val;

@@ -10,7 +10,7 @@ struct ListNode {
 
 class Solution {
 public:
-	ListNode* findKthNode(struct ListNode *head, int k) {
+	ListNode* findKthNode(ListNode *head, int k) {
 		if (head == nullptr || k < 1) {
 			return head;
 		}
