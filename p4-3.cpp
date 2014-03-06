@@ -48,23 +48,33 @@ void clearBinaryTree(TreeNode *&root)
 	}
 }
 
+int calcHeight(TreeNode *root)
+{
+	if (root == nullptr) {
+		return 0;
+	} else {
+		return max(calcHeight(root->left),calcHeight(root->right)) + 1;
+	}
+}
+
 int main()
 {
 	TreeNode *root;
 	unordered_map<TreeNode *, int> heights;
-	int i, n, val;
+	int i, n;
 	vector<int> v;
 	
 	while (scanf("%d", &n) == 1 && n > 0) {
 		for (i = 0; i < n; ++i) {
-			scanf("%d", &val);
-			v.push_back(val);
+			v.push_back(i + 1);
 		}
 		
 		consructBSTFromSortedArray(v, 0, n - 1, root);
 		preorderTraversal(root);
 		printf("\n");
 		
+		printf("height = %d\n", calcHeight(root));
+
 		v.clear();
 		clearBinaryTree(root);
 	}
