@@ -1,8 +1,5 @@
 // 4.3 Convert sorted unique array to height-balanced binary search tree.
-#include <algorithm>
 #include <cstdio>
-#include <stack>
-#include <unordered_map>
 using namespace std;
 
 struct TreeNode {
@@ -48,19 +45,9 @@ void clearBinaryTree(TreeNode *&root)
 	}
 }
 
-int calcHeight(TreeNode *root)
-{
-	if (root == nullptr) {
-		return 0;
-	} else {
-		return max(calcHeight(root->left),calcHeight(root->right)) + 1;
-	}
-}
-
 int main()
 {
 	TreeNode *root;
-	unordered_map<TreeNode *, int> heights;
 	int i, n;
 	vector<int> v;
 	
@@ -73,8 +60,6 @@ int main()
 		preorderTraversal(root);
 		printf("\n");
 		
-		printf("height = %d\n", calcHeight(root));
-
 		v.clear();
 		clearBinaryTree(root);
 	}

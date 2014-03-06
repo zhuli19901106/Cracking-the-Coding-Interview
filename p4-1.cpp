@@ -1,7 +1,6 @@
 // 4.1 Implement an algorithm to check if a bianry tree is height-balanced.
 #include <algorithm>
 #include <cstdio>
-#include <stack>
 #include <unordered_map>
 using namespace std;
 

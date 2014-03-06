@@ -1,8 +1,5 @@
 // 4.4 Level order traversal
-#include <algorithm>
 #include <cstdio>
-#include <stack>
-#include <unordered_map>
 #include <vector>
 using namespace std;
 
@@ -84,7 +81,6 @@ void clearList(ListNode *&root)
 int main()
 {
 	TreeNode *root;
-	unordered_map<TreeNode *, int> heights;
 	int i, n;
 	vector<int> v;
 	vector<ListNode *> listHeads, listTails;
