@@ -1,4 +1,4 @@
-// 9.7 Given unlimited quarters(25 cents), dimes(10 cents), nickels(5 cents) and pennies(1 cent), how many ways are there to represent n cents.
+// 9.8 Given unlimited quarters(25 cents), dimes(10 cents), nickels(5 cents) and pennies(1 cent), how many ways are there to represent n cents.
 #include <cstdio>
 #include <vector>
 using namespace std;
