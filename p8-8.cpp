@@ -89,6 +89,17 @@ public:
 		}
 		return 0;
 	};
+	
+	~OthelloGame() {
+		int i;
+		
+		for (i = 0; i < 8; ++i) {
+			board[i].clear();
+			possible_position[i].clear();
+		}
+		board.clear();
+		possible_position.clear();
+	}
 private:
 	// 1 for player one, 2 for player two, 0 for empty.
 	vector<vector<int> > board;
