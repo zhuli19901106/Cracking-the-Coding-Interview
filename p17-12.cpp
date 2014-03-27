@@ -1,4 +1,4 @@
-// 17.2 Given an array of integers and target value, find all pairs in the array that sum up to the target.
+// 17.12 Given an array of integers and target value, find all pairs in the array that sum up to the target.
 // Use hash to achieve O(n) time complexity. Duplicates pairs are skipped.
 #include <cstdio>
 #include <unordered_map>
