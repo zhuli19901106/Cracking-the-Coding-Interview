@@ -1,4 +1,4 @@
-// 16.2 How to measure the time 
+// 16.2 How to measure the time of a context switch?
 // reference code from http://blog.csdn.net/dashon2011/article/details/7412548
 #include <stdio.h>
 #include <stdlib.h>
